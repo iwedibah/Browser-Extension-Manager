@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Browser Extensions Manager</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header-container">
+      <img src="./assets/images/logo.svg" alt="Extensions" class="header-logo">
+      <button class="theme-toggle" aria-label="Toggle color theme">
+        <img src="./assets/images/icon-moon.svg" alt="Switch to dark theme" class="theme-icon light">
+        <img src="./assets/images/icon-sun.svg" alt="Switch to light theme" class="theme-icon dark">
+      </button>
+    </header>
+
+    <div class="list-header">
+      <h2>Extensions List</h2>
+      <nav class="filters" role="tablist" aria-label="Filter extensions">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="extensions-grid">All</button>
+        <button class="filter-btn" data-filter="active" role="tab" aria-selected="false" aria-controls="extensions-grid">Active</button>
+        <button class="filter-btn" data-filter="inactive" role="tab" aria-selected="false" aria-controls="extensions-grid">Inactive</button>
+      </nav>
+    </div>
+
+    <main class="extensions-grid" id="extensions-grid" role="tabpanel" aria-live="polite">
+      <!-- Extensions will be dynamically inserted here -->
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
