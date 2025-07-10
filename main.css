@@ -98,6 +98,50 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   transition: background var(--transition-speed) ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Attribution Footer */
+.attribution {
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background: var(--surface);
+  margin-top: auto;
+  box-shadow: var(--card-shadow);
+}
+
+.attribution a {
+  color: var(--red-400);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+.attribution a:hover {
+  color: var(--red-500);
+}
+
+.attribution a:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+[data-theme="dark"] .attribution {
+  color: var(--neutral-300);
+  background: var(--surface);
+}
+
+[data-theme="dark"] .attribution a {
+  color: var(--red-400);
+}
+
+[data-theme="dark"] .attribution a:hover {
+  color: var(--red-500);
 }
 
 /* Layout */
@@ -105,7 +149,8 @@ body {
   width: min(100% - 3rem, 1440px);
   margin: 0 auto;
   padding: 4rem 2.5rem;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px); /* Adjusted to make room for attribution */
+  flex: 1;
 }
 
 /* Header Styles */
